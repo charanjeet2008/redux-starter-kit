@@ -7,19 +7,17 @@ import FloatingActionButton from 'material-ui/FloatingActionButton';
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-class Fab extends Component{
+class Header extends Component{
     getChildContext() {
         return { muiTheme: getMuiTheme(baseTheme) };
     }
     render () {
-        return <FloatingActionButton backgroundColor={this.props.backgroundColor} secondary={false}>
-            <label htmlFor="">Add</label>
-        </FloatingActionButton>
+        return <div>Header</div>
     }
 }
 
-Fab.childContextTypes = {
+Header.childContextTypes = {
     muiTheme: React.PropTypes.object
 }
 
-export default connect()(Fab);
+export default connect()(Header);
